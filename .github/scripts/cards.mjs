@@ -165,15 +165,18 @@ const shell = (w, h, title, body) => `<svg xmlns="http://www.w3.org/2000/svg" wi
 </svg>`;
 
 function statsCard(d) {
+  // Drop zero rows. Solo product work produces no PRs or code reviews, and a
+  // column of 0s reads as an empty profile rather than a private one.
   const rows = [
-    ["Total Stars",       d.stars],
-    ["Total Commits",     d.commits],
-    ["Total PRs",         d.prs],
-    ["Total Issues",      d.issues],
-    ["Code Reviews",      d.reviews],
-    ["Repositories",      d.repos],
-    ["Followers",         d.followers]
-  ];
+    ["Total Commits",  d.commits],
+    ["Repositories",   d.repos],
+    ["Total Stars",    d.stars],
+    ["Languages",      d.top.length],
+    ["Total PRs",      d.prs],
+    ["Total Issues",   d.issues],
+    ["Code Reviews",   d.reviews],
+    ["Followers",      d.followers]
+  ].filter(([, v]) => v > 0).slice(0, 7);
   const body = rows.map(([k, v], i) => `
     <g class="row" style="animation-delay:${i * 70}ms">
       <text x="30"  y="${52 + i * 21}" class="k">${esc(k)}</text>
