@@ -87,12 +87,12 @@ Furniture commerce — catalog-heavy storefront, operations admin, backend, and 
 <br>
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=milanmogha&show_icons=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=00FF9C&text_color=C9F7E3&icon_color=00FF9C&ring_color=00FF9C" alt="github stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=milanmogha&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=00FF9C&text_color=C9F7E3" alt="top languages" />
+<img height="210" src="https://raw.githubusercontent.com/milanmogha/milanmogha/output/stats.svg" alt="github stats" />
+<img height="210" src="https://raw.githubusercontent.com/milanmogha/milanmogha/output/langs.svg" alt="language mix" />
 
 <br>
 
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=milanmogha&hide_border=true&background=0D1117&stroke=16241F&ring=00FF9C&fire=00FF9C&currStreakLabel=00FF9C&sideLabels=C9F7E3&currStreakNum=C9F7E3&sideNums=C9F7E3&dates=4E7C6A" alt="streak" />
+<img height="145" src="https://raw.githubusercontent.com/milanmogha/milanmogha/output/streak.svg" alt="contribution activity" />
 
 </div>
 </details>
