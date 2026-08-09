@@ -80,20 +80,35 @@ async function collect() {
   const u = data.user;
   const repos = u.repositories.nodes;
 
-  // language sizes in bytes, aggregated across every repo the token can see
+  // Language mix, normalised PER REPO rather than by raw byte totals. Summing
+  // bytes lets a single repo full of build output drown everything else — the
+  // first run of this scored LLVM at 76% off one MAUI project's artifacts.
+  // Averaging each repo's own share answers the more useful question: what does
+  // this person actually work in?
+  const IGNORED = new Set(["LLVM", "Assembly", "Batchfile", "Makefile", "CMake", "Objective-C++"]);
+
   const langs = new Map();
+  let counted = 0;
   for (const r of repos) {
-    for (const e of r.languages.edges) {
-      const cur = langs.get(e.node.name) || { size: 0, color: e.node.color };
-      cur.size += e.size;
+    const edges = r.languages.edges.filter(e => !IGNORED.has(e.node.name));
+    const repoTotal = edges.reduce((a, e) => a + e.size, 0);
+    if (!repoTotal) continue;
+    counted++;
+    for (const e of edges) {
+      const cur = langs.get(e.node.name) || { share: 0, color: e.node.color };
+      cur.share += e.size / repoTotal;   // this repo contributes at most 1.0
       langs.set(e.node.name, cur);
     }
   }
-  const total = [...langs.values()].reduce((a, b) => a + b.size, 0) || 1;
+  const denom = counted || 1;
   const top = [...langs.entries()]
-    .sort((a, b) => b[1].size - a[1].size)
+    .sort((a, b) => b[1].share - a[1].share)
     .slice(0, 6)
-    .map(([name, v]) => ({ name, pct: (v.size / total) * 100, color: v.color || T.accent }));
+    .map(([name, v]) => ({ name, pct: (v.share / denom) * 100, color: v.color || T.accent }));
+
+  // rescale so the visible slice fills the bar
+  const shown = top.reduce((a, l) => a + l.pct, 0) || 1;
+  top.forEach(l => { l.pct = (l.pct / shown) * 100; });
 
   // streaks from the contribution calendar
   const days = u.contributionsCollection.contributionCalendar.weeks
