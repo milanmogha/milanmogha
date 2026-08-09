@@ -27,12 +27,17 @@ jobs:
             dist/snake.svg?color_snake=#00ff9c&color_dots=#ebedf0,#c9f7e3,#5ce7b4,#00ff9c,#00b36e
             dist/snake-dark.svg?palette=github-dark&color_snake=#00ff9c&color_dots=#161b22,#0e4429,#006d32,#26a641,#00ff9c
 
-      - name: generate stat cards
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      # snk runs in a container as root, so dist/ comes back root-owned and the
+      # runner user cannot add files to it.
+      - name: take ownership of dist
+        run: sudo chown -R "$(id -u):$(id -g)" dist
 
-      - run: node .github/scripts/cards.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: generate stat cards
+        run: node .github/scripts/cards.mjs
         env:
           LOGIN: ${{ github.repository_owner }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
