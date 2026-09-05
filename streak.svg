@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="145" viewBox="0 0 470 145" role="img" aria-label="contribution activity">
+<style>
+  .f{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}
+  .t{fill:#00FF9C;font-size:13px;font-weight:700}
+  .k{fill:#4E7C6A;font-size:12px}
+  .v{fill:#C9F7E3;font-size:12px;font-weight:700}
+  .s{fill:#4E7C6A;font-size:10px}
+  .row{opacity:0;animation:in .45s ease forwards}
+  @keyframes in{to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.row{animation:none;opacity:1}}
+</style>
+<rect x=".5" y=".5" width="469" height="144" rx="8" fill="#0D1117" stroke="#16241F"/>
+<g class="f">
+  <circle cx="18" cy="19" r="4" fill="#00FF9C"/>
+  <text x="30" y="23" class="t">contribution activity</text>
+  
+    <g class="row" style="animation-delay:0ms">
+      <text x="78.33333333333333" y="80"  text-anchor="middle"
+            style="fill:#00FF9C;font-size:30px;font-weight:700">638</text>
+      <text x="78.33333333333333" y="102" text-anchor="middle" class="k">contributions</text>
+      <text x="78.33333333333333" y="119" text-anchor="middle" class="s">past year</text>
+      
+    </g>
+    <g class="row" style="animation-delay:90ms">
+      <text x="235" y="80"  text-anchor="middle"
+            style="fill:#00FF9C;font-size:30px;font-weight:700">0</text>
+      <text x="235" y="102" text-anchor="middle" class="k">current streak</text>
+      <text x="235" y="119" text-anchor="middle" class="s">days</text>
+      <line x1="156.66666666666666" y1="46" x2="156.66666666666666" y2="126" stroke="#16241F"/>
+    </g>
+    <g class="row" style="animation-delay:180ms">
+      <text x="391.66666666666663" y="80"  text-anchor="middle"
+            style="fill:#00FF9C;font-size:30px;font-weight:700">7</text>
+      <text x="391.66666666666663" y="102" text-anchor="middle" class="k">longest streak</text>
+      <text x="391.66666666666663" y="119" text-anchor="middle" class="s">days</text>
+      <line x1="313.3333333333333" y1="46" x2="313.3333333333333" y2="126" stroke="#16241F"/>
+    </g>
+</g>
+</svg>

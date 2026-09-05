@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="210" viewBox="0 0 300 210" role="img" aria-label="milanmogha@github">
+<style>
+  .f{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}
+  .t{fill:#00FF9C;font-size:13px;font-weight:700}
+  .k{fill:#4E7C6A;font-size:12px}
+  .v{fill:#C9F7E3;font-size:12px;font-weight:700}
+  .s{fill:#4E7C6A;font-size:10px}
+  .row{opacity:0;animation:in .45s ease forwards}
+  @keyframes in{to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.row{animation:none;opacity:1}}
+</style>
+<rect x=".5" y=".5" width="299" height="209" rx="8" fill="#0D1117" stroke="#16241F"/>
+<g class="f">
+  <circle cx="18" cy="19" r="4" fill="#00FF9C"/>
+  <text x="30" y="23" class="t">milanmogha@github</text>
+  
+    <g class="row" style="animation-delay:0ms">
+      <text x="30"  y="52" class="k">Total Commits</text>
+      <text x="270" y="52" class="v" text-anchor="end">144</text>
+    </g>
+    <g class="row" style="animation-delay:70ms">
+      <text x="30"  y="73" class="k">Repositories</text>
+      <text x="270" y="73" class="v" text-anchor="end">25</text>
+    </g>
+    <g class="row" style="animation-delay:140ms">
+      <text x="30"  y="94" class="k">Total Stars</text>
+      <text x="270" y="94" class="v" text-anchor="end">19</text>
+    </g>
+    <g class="row" style="animation-delay:210ms">
+      <text x="30"  y="115" class="k">Languages</text>
+      <text x="270" y="115" class="v" text-anchor="end">6</text>
+    </g>
+    <g class="row" style="animation-delay:280ms">
+      <text x="30"  y="136" class="k">Total Issues</text>
+      <text x="270" y="136" class="v" text-anchor="end">1</text>
+    </g>
+    <g class="row" style="animation-delay:350ms">
+      <text x="30"  y="157" class="k">Followers</text>
+      <text x="270" y="157" class="v" text-anchor="end">2</text>
+    </g>
+</g>
+</svg>
