@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="210" viewBox="0 0 300 210" role="img" aria-label="language mix">
+<style>
+  .f{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace}
+  .t{fill:#00FF9C;font-size:13px;font-weight:700}
+  .k{fill:#4E7C6A;font-size:12px}
+  .v{fill:#C9F7E3;font-size:12px;font-weight:700}
+  .s{fill:#4E7C6A;font-size:10px}
+  .row{opacity:0;animation:in .45s ease forwards}
+  @keyframes in{to{opacity:1}}
+  @media (prefers-reduced-motion:reduce){.row{animation:none;opacity:1}}
+</style>
+<rect x=".5" y=".5" width="299" height="209" rx="8" fill="#0D1117" stroke="#16241F"/>
+<g class="f">
+  <circle cx="18" cy="19" r="4" fill="#00FF9C"/>
+  <text x="30" y="23" class="t">language mix</text>
+  
+    <rect x="30" y="46" width="240" height="9" rx="4.5" fill="#1B2E28"/>
+    <g><rect x="30.0" y="46" width="86.0" height="9" fill="#f1e05a"/><rect x="116.0" y="46" width="64.5" height="9" fill="#e34c26"/><rect x="180.5" y="46" width="52.9" height="9" fill="#663399"/><rect x="233.4" y="46" width="29.8" height="9" fill="#3178c6"/><rect x="263.2" y="46" width="6.6" height="9" fill="#b07219"/><rect x="269.8" y="46" width="1.0" height="9" fill="#7355dd"/></g>
+    <g class="row" style="animation-delay:0ms">
+      <circle cx="34" cy="79" r="4" fill="#f1e05a"/>
+      <text x="46" y="83" class="k">JavaScript</text>
+      <text x="270" y="83" class="v" text-anchor="end">35.8%</text>
+    </g>
+    <g class="row" style="animation-delay:70ms">
+      <circle cx="34" cy="99" r="4" fill="#e34c26"/>
+      <text x="46" y="103" class="k">HTML</text>
+      <text x="270" y="103" class="v" text-anchor="end">26.9%</text>
+    </g>
+    <g class="row" style="animation-delay:140ms">
+      <circle cx="34" cy="119" r="4" fill="#663399"/>
+      <text x="46" y="123" class="k">CSS</text>
+      <text x="270" y="123" class="v" text-anchor="end">22.1%</text>
+    </g>
+    <g class="row" style="animation-delay:210ms">
+      <circle cx="34" cy="139" r="4" fill="#3178c6"/>
+      <text x="46" y="143" class="k">TypeScript</text>
+      <text x="270" y="143" class="v" text-anchor="end">12.4%</text>
+    </g>
+    <g class="row" style="animation-delay:280ms">
+      <circle cx="34" cy="159" r="4" fill="#b07219"/>
+      <text x="46" y="163" class="k">Java</text>
+      <text x="270" y="163" class="v" text-anchor="end">2.8%</text>
+    </g>
+    <g class="row" style="animation-delay:350ms">
+      <circle cx="34" cy="179" r="4" fill="#7355dd"/>
+      <text x="46" y="183" class="k">C#</text>
+      <text x="270" y="183" class="v" text-anchor="end">0.1%</text>
+    </g><text x="30" y="209" class="s">public repos only</text>
+</g>
+</svg>
